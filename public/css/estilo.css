@@ -33,3 +33,32 @@ html, body {
 	color: white;
 	text-decoration: none;
 }
+
+ /*NAVBAR*/
+ .separa{
+	font-size: 20px;
+	margin: auto 20px;
+  }
+
+  .dropdown-menu{
+  background-color: #ECECEC;
+
+  }
+  .dropdown-item:hover{
+  background-color: #c6c6c6;
+  }
+
+  /* botao */
+  .bota{
+	margin: 5px;
+	font-size: 15px;
+	transition-duration: 0.3s;
+  }
+
+  .bota.ajuda{
+	color: white;
+	background-color: #109c54;
+  }
+  .bota.ajuda:hover{
+   background-color: #026532; 
+  }
