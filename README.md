@@ -4,18 +4,22 @@
     <a href="https://www.espm.br/cursos-de-graduacao/sistemas-de-informacao/"><img src="https://raw.githubusercontent.com/tech-espm/misc-template/main/logo.png" alt="Sistemas de Informação ESPM" style="width: 375px;"/></a>
 </p>
 
-# [Nome do Projeto] (por exemplo, Sistema de Gerenciamento da ESPM Júnior)
+# [Smart Energy]()
 
 ### 2024-02
 
 ## Integrantes
-- [Nome do integrante 1 e link do portifólio](https://github.com/tech-espm/)
-- [Nome do integrante 2 e link do portifólio](https://github.com/tech-espm/)
-- [Nome do integrante 3 e link do portifólio](https://github.com/tech-espm/)
+- [Alexandre Martinelli](https://github.com/alexandremartinelli11/)
+- [Guilherme Orlandi](https://github.com/carrico05/)
+- [Hugo Ferraz](https://github.com/z-hugo-ferraz/)
+- [Julia Biagio](https://github.com/juliabiagio/)
+- [Luiz Felipe Pimenta](https://github.com/PimentaBrrt/)
+- [Theo Gaspar](https://github.com/tigasparzin/)
+- [Ycaro Campovilla](https://github.com/Ycakraft/)
 
 ## Descrição do Projeto
 
-Descrição do projeto, incluindo o problema original, e o objetivo final. Pode ser em mais de um parágrafo.
+Notando a falta de conscientização da população geral brasileira em relação às matrizes energéticas e à importância que tem a produção de energia limpa para o futuro, o nosso grupo, após uma sessão de Brainstorming, decidiu realizar um site descritivo com o objetivo final de informar dados relevantes em relação ao tema, como a principal fonte de energia de cada Estado brasileiro, a quantidade de carbono emitida no país e em cada município e fontes de energia sustentáveis potenciais para o Brasil. Contudo, quando começamos o desenvolvimento o projeto, pensamos que é interessante tornar nosso site um ambiente seguro para discutir o tema no formato de fórums e realizar postagens, tornando-o, também, interativo. É importante salientar que haverão políticas bem estabelecidas que limitarão os usuários para evitar temas sensíveis e indesejados para o propósito do nosso site.
 
 # Detalhes de Configuração
 
