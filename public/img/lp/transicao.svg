@@ -1,0 +1,52 @@
+<svg
+   width="85.599998mm"
+   height="53.98mm"
+   viewBox="0 0 323.52756 204.01889"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="TRANSICAO.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.3655601"
+     inkscape:cx="18.307506"
+     inkscape:cy="58.217868"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#18f181;fill-opacity:1;stroke-width:1.05"
+       id="rect2721"
+       width="323.52756"
+       height="204.01889"
+       x="0"
+       y="0" />
+    <path
+       id="rect451"
+       style="fill:#5a8cff;stroke-width:1.05;fill-opacity:1"
+       d="m 0,0 h 323.52756 l -10e-6,102.00945 c 0,0 0,-102.0094472655646 -161.76377,0 C 0,204.0189 0,102.00945 0,102.00945 Z"
+       sodipodi:nodetypes="cccscc" />
+  </g>
+</svg>
