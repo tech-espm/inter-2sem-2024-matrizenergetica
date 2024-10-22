@@ -192,5 +192,13 @@ img {
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-	
+	}
+	.registro{
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 	}
