@@ -1,20 +1,50 @@
-<div class="penguins">
-    <div class="campo">
-        <div class="login">
-            <h2>Login</h2>
-            <div>
-                <input type="text" required aria-label="Usuário">
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form>
+            <h1>Registre-se</h1>
+            
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Senha">
+            <button>Registrar</button>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form>
+            <h1>Entre</h1>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Senha">
+            <a href="#">Esqueci minha senha</a>
+            <button>LogIn</button>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Já tem uma conta?</h1>
+                <p>Clique abaixo para acessá-la</p>
+                <button class="hidden" id="login">Fazer login</button>
             </div>
-            <div>
-                <input type="password" required aria-label="Senha">
+            <div class="toggle-panel toggle-right">
+                <h1>Ainda não tem uma conta?</h1>
+                <p>Cadastre-se para ter acesso completo!</p>
+                <button class="hidden" id="register">Cadastre-se</button>
             </div>
-            <div>
-                <button class="bota" type="submit">Login</button>
-            </div>
-        </div>
-        <div class="registro">
-            <h2>Não tem uma conta?</h2>
-            <button>Cadastre-se</button>
         </div>
     </div>
 </div>
+
+
+<script>
+    const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+</script>

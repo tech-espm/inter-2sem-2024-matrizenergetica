@@ -32,3 +32,4 @@ async function exibirErro(response) {
 
 	return Swal.fire("Erro", r, "error");
 }
+
