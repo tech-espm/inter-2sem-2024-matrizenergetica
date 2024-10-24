@@ -166,8 +166,14 @@ img {
 	.icon{
 	height: 100px;
 	}
+	.fundo-sobre{
+		background-color: #004a94;
+		margin-top: 20px;
+		padding: 20px auto;
+	}
 	
 	
+
 
 
 
@@ -354,3 +360,52 @@ img {
 	.container.active .toggle-right{
 		transform: translateX(200%);
 	}
+
+h1{
+padding-top: 30px;
+padding-left: 20px;
+text-align: start;
+}
+p{
+color: #ECECEC;
+padding-left: 20px;
+text-align: start;
+}
+p.paragrafo{
+padding-bottom: 70px;
+
+}
+
+body{
+margin: 0px;
+background-color: #4CB944;
+color: black;
+font-family: 'montserrat';
+max-width: 1366px;
+}
+/* titulo da pagina */
+.icon{
+height: 100px;
+}
+.center{
+	text-align: center;
+	padding: 0px;
+}
+.redondo{
+	border-radius: 10px;
+}
+.imagem-sobre{
+	max-width: 80%;
+}
+.arruma-imagem{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.arruma-p{
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.text-color{
+	color: white;
+}
+
