@@ -9,7 +9,7 @@ img {
 	}
 	
 	.limitador {
-	max-width: 1366px;
+	max-width: 1820px;
 	margin: 0px auto;
 	
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
@@ -48,7 +48,7 @@ img {
 	
 	/*NAVBAR*/
 	.separa{
-	font-size: 20px;
+	font-size: 130%;
 	margin: auto 20px;
 	}
 	
@@ -62,20 +62,20 @@ img {
 	
 	/* botao */
 	.bota{
-	color: #ececec;
+	color: #070707;
 	margin: 5px;
 	font-size: 15px;
 	transition-duration: 0.5s;
 	align-self: center;
 	border: none;
-	background-color: #1e88e5;
+	background-color: #f5f4f3;
 	padding: 10px;
 	}
 
 	.bota:hover{
 	border: none;
 	padding: 12px;
-	background-color: #004a94;
+	background-color: #20613a;
 	}
 
 	
@@ -103,10 +103,10 @@ img {
 	}
 	
 	.fundo.azul{
-	background-color: #2196F3;
+	background-color: #8be7b4;
 	}
 	.fundo.verde{
-	background-color: #8BC34A;
+	background-color: #72c398;
 	}
 	.logo{
 	margin: 10px;
@@ -115,8 +115,9 @@ img {
 	
 	.transicao{
 	width: 100%;
-	height: 100px;
+	height: 6vmax;
 	background-repeat: no-repeat;  
+	margin-bottom: -1px;
 	}
 	
 	
@@ -155,19 +156,12 @@ img {
 		color: #ECECEC;
 	}
 	
-	body{
-	margin: 0px;
-	background-color: #8BC34A;
-	color: black;
-	font-family: 'montserrat';
-	max-width: 1366px;
-	}
 	/* titulo da pagina */
 	.icon{
 	height: 100px;
 	}
 	.fundo-sobre{
-		background-color: #004a94;
+		background-color: rgb(51, 171, 159);
 		margin-top: 20px;
 		padding: 5px 5px;
 	}
@@ -378,10 +372,10 @@ padding-bottom: 70px;
 
 body{
 margin: 0px;
-background-color: #4CB944;
+background-color: #72c398;
 color: black;
 font-family: 'montserrat';
-max-width: 1366px;
+max-width: 100%;
 }
 /* titulo da pagina */
 .icon{
