@@ -68,14 +68,14 @@ img {
 	transition-duration: 0.5s;
 	align-self: center;
 	border: none;
-	background-color: #1e88e5;
+	background-color: #BC4749;
 	padding: 10px;
 	}
 
 	.bota:hover{
 	border: none;
 	padding: 12px;
-	background-color: #004a94;
+	background-color: #AC2729;
 	}
 
 	
@@ -103,10 +103,10 @@ img {
 	}
 	
 	.fundo.azul{
-	background-color: #2196F3;
+	background-color: #A3B18A;
 	}
 	.fundo.verde{
-	background-color: #8BC34A;
+	background-color: #F2E8CF;
 	}
 	.logo{
 	margin: 10px;
@@ -133,16 +133,7 @@ img {
 	background-color: #383838;
 	}
 	
-	h1{
-	padding-top: 30px;
-	padding-left: 20px;
-	text-align: start;
-	}
-	p{
-	color: #ECECEC;
-	padding-left: 20px;
-	text-align: start;
-	}
+
 	p.paragrafo{
 	padding-bottom: 70px;
 	
@@ -157,7 +148,7 @@ img {
 	
 	body{
 	margin: 0px auto;
-	background-color: #8BC34A;
+	background-color: #A7C957;
 	color: black;
 	font-family: 'montserrat';
 	max-width: 1366px;
@@ -166,21 +157,17 @@ img {
 	.icon{
 	height: 100px;
 	}
+	.fundo-sobre{
+		background-color: #386641;
+		margin-top: 20px;
+		padding: 5px 5px;
+	}
 	
-	
-
-
-
-
-
-
-
-
 
 	.container{
 		margin-top:50px;
 		margin-bottom:50px;
-		background-color: #ECECEC;
+		background-color: #DAD7CD;
 		border-radius: 30px;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 		position: relative;
@@ -209,8 +196,8 @@ img {
 	}
 	
 	.container button{
-		background-color: #2196F3;
-		color: #ECECEC;
+		background-color: #BC4749;
+		color: #DAD7CD;
 		font-size: 12px;
 		padding: 10px 45px;
 		border: 1px solid transparent;
@@ -224,11 +211,11 @@ img {
 	
 	.container button.hidden{
 		background-color: transparent;
-		border-color: #ECECEC;
+		border-color: #DAD7CD;
 	}
 	
 	.container form{
-		background-color: #ECECEC;
+		background-color: #DAD7CD;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -239,7 +226,7 @@ img {
 	
 	.container input{
 		background-color: #eee;
-		border: 2px, solid,#2196F3;
+		border: 2px, solid,#BC4749;
 		margin: 8px 0;
 		padding: 10px 15px;
 		font-size: 13px;
@@ -307,10 +294,10 @@ img {
 	}
 	
 	.toggle{
-		background-color: #2196F3;
+		background-color: #BC4749;
 		height: 100%;
-		background: linear-gradient(to right, #2196F3, #2196F3);
-		color: #ECECEC;
+		background: linear-gradient(to right, #BC4749, #BC4749);
+		color: #DAD7CD;
 		position: relative;
 		left: -100%;
 		height: 100%;
@@ -354,3 +341,80 @@ img {
 	.container.active .toggle-right{
 		transform: translateX(200%);
 	}
+
+
+h1{
+padding-top: 30px;
+padding-left: 20px;
+text-align: start;
+}
+p{
+color: #ECECEC;
+padding-left: 20px;
+text-align: start;
+}
+p.paragrafo{
+padding-bottom: 70px;
+
+}
+
+body{
+margin: 0px;
+background-color: #F2E8CF;
+color: black;
+font-family: 'montserrat';
+max-width: 1366px;
+}
+/* titulo da pagina */
+.icon{
+height: 100px;
+}
+.center{
+	text-align: center;
+	padding: 0px;
+}
+.redondo{
+	border-radius: 100%;
+}
+.imagem-sobre{
+	max-width: 80%;
+	
+}
+.arruma-imagem{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.arruma-p{
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.text-color{
+	color: white;
+}
+
+
+.carrossel{
+	background-repeat: no-repeat;
+	background-position: 30%;
+	height: 490px;
+	display: block;
+	background-image: url(https://clickpetroleoegas.com.br/wp-content/uploads/2022/06/Primeira-usina-de-energia-eolica-da-regiao-Norte-do-RS-vai-abastecer-cerca-de-40-mil-residencias.jpg);
+}
+
+p.carrossel{
+	text-align: end;
+	color: #386641;
+	size: 10%;
+}
+button.carrossel{
+	padding: 10px;
+	color: #ececec;
+	background-color: #BC4749;
+	font-size: 10px;
+}
+button.carrossel:hover{
+	padding: 12px;
+	color: #ececec;
+	background-color: #AC2729;
+	font-size: 10px;
+}
