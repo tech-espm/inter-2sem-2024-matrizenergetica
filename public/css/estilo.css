@@ -103,10 +103,10 @@ img {
 	}
 	
 	.fundo.azul{
-	background-color: #8be7b4;
+	background-color: #356bb2;
 	}
 	.fundo.verde{
-	background-color: #72c398;
+	background-color: #39aeed;
 	}
 	.logo{
 	margin: 10px;
@@ -161,7 +161,7 @@ img {
 	height: 100px;
 	}
 	.fundo-sobre{
-		background-color: rgb(51, 171, 159);
+		background-color: #255593;
 		margin-top: 20px;
 		padding: 5px 5px;
 	}
@@ -209,7 +209,7 @@ img {
 	}
 	
 	.container button{
-		background-color: #2196F3;
+		background-color: #356bb2;
 		color: #ECECEC;
 		font-size: 12px;
 		padding: 10px 45px;
@@ -239,7 +239,7 @@ img {
 	
 	.container input{
 		background-color: #eee;
-		border: 2px, solid,#2196F3;
+		border: 2px, solid,#356bb2;
 		margin: 8px 0;
 		padding: 10px 15px;
 		font-size: 13px;
@@ -307,9 +307,9 @@ img {
 	}
 	
 	.toggle{
-		background-color: #2196F3;
+		background-color: #356bb2;
 		height: 100%;
-		background: linear-gradient(to right, #2196F3, #2196F3);
+		background: linear-gradient(to right, #356bb2, #356bb2);
 		color: #ECECEC;
 		position: relative;
 		left: -100%;
@@ -372,7 +372,7 @@ padding-bottom: 70px;
 
 body{
 margin: 0px;
-background-color: #72c398;
+background-color: #bdbbbb;
 color: black;
 font-family: 'montserrat';
 max-width: 100%;
@@ -402,5 +402,8 @@ height: 100px;
 }
 .text-color{
 	color: white;
+}
+.text-3d{
+	filter:drop-shadow(5px 5px 10px rgba(0,0,0,10.5));
 }
 

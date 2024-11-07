@@ -50,6 +50,12 @@ class IndexRoute {
 
 		res.render("index/produtos", opcoes);
 	}
+	async posts(req, res) {
+        let opcoes = {
+            titulo: "posts"
+        };
+        res.render("index/posts", opcoes);
+    }
 }
 
 export = IndexRoute;
