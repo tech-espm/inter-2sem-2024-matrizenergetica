@@ -158,6 +158,9 @@ img {
 		border-radius: 10px;
 		padding: 10px;
 	}
+	button.peace:hover{
+		background-color: #3b7028;
+	}
 	button.wwf{
 		background-color: #b73501;
 		margin-left: 20px;
@@ -165,6 +168,9 @@ img {
 		border-color: #e74503;
 		border-radius: 10px;
 		padding: 10px;
+	}
+	button.wwf:hover{
+		background-color: #e14000;
 	}
 
 	h1.peace{
