@@ -62,20 +62,20 @@ img {
 	
 	/* botao */
 	.bota{
-	color: #ececec;
+	color: black;
 	margin: 5px;
 	font-size: 15px;
 	transition-duration: 0.5s;
 	align-self: center;
 	border: none;
-	background-color: #BC4749;
+	background-color: whitesmoke;
 	padding: 10px;
 	}
 
 	.bota:hover{
 	border: none;
 	padding: 12px;
-	background-color: #AC2729;
+	background-color: #5aa621;
 	}
 
 	
@@ -108,11 +108,8 @@ img {
 	}
 	.fundo.verde{
 	background-color: #39aeed;
-	background-color: #A3B18A;
 	}
-	.fundo.verde{
-	background-color: #F2E8CF;
-	}
+	
 	.logo{
 	margin: 10px;
 	max-width: 50px;
