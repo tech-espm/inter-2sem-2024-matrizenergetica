@@ -9,7 +9,7 @@ img {
 	}
 	
 	.limitador {
-	max-width: 1366px;
+	max-width: 1920px;
 	margin: 0px auto;
 	
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
@@ -48,7 +48,7 @@ img {
 	
 	/*NAVBAR*/
 	.separa{
-	font-size: 20px;
+	font-size: 120%;
 	margin: auto 20px;
 	}
 	
@@ -64,7 +64,7 @@ img {
 	.bota{
 	color: black;
 	margin: 5px;
-	font-size: 15px;
+	font-size: 100%;
 	transition-duration: 0.5s;
 	align-self: center;
 	border: none;
@@ -83,7 +83,7 @@ img {
 	.novidades{
 	padding: 20px 10px 3px;
 	text-align: start;
-	font-size: 30px;
+	font-size: 200%;
 	}
 	.destaques{
 	max-height: 80%;
@@ -120,13 +120,72 @@ img {
 	height: 100px;
 	background-repeat: no-repeat;  
 	}
-	
+
+	div.coral-limite{
+		max-width: 80%;
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+	div.coral-peace{
+		background-color: #386641;
+		padding-left: 20px;
+	}
+	div.wwf{
+		background-color: #b73501;
+		padding-left: 20px;
+	}
+	img.coral-peace{
+		margin-left: -30px;
+		margin-bottom: -30px;
+		max-width: 100%;
+	}
+	img.wwf{
+		margin-right: -30px;
+		margin-bottom: -30px;
+		max-width: 100%;
+	}
 	
 	/* formatacao geral */
 	header{
 	padding: 0px;
 	}
 	
+	button.peace{
+		background-color: #56a13a;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		border-color: #386641;
+		border-radius: 10px;
+		padding: 10px;
+	}
+	button.wwf{
+		background-color: #b73501;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		border-color: #e74503;
+		border-radius: 10px;
+		padding: 10px;
+	}
+
+	h1.peace{
+		color:#56a13a;
+		background-color: #ECECEC;
+		border-radius: 22px;
+		max-height: 10%;
+		max-width: 40%;
+		margin-left: 3%;
+		padding-top: 5px;
+	}
+	h1.wwf{
+		color:black;
+		background-color: #ECECEC;
+		border-radius: 22px;
+		max-height: 10%;
+		max-width: 40%;
+		margin-left: 3%;
+		padding-top: 5px;
+	}
+
 	hr{
 	border: none;
 	height: 2px;
@@ -139,6 +198,12 @@ img {
 	p.paragrafo{
 	padding-bottom: 70px;
 	
+	}
+	.branco{
+		color: #ECECEC;
+	}
+	.preto{
+		color: black;
 	}
 	input{
 		margin: 5px;
@@ -153,7 +218,7 @@ img {
 	background-color: #A7C957;
 	color: black;
 	font-family: 'montserrat';
-	max-width: 1366px;
+	max-width: 1920px;
 	}
 	/* titulo da pagina */
 	.icon{
@@ -180,19 +245,19 @@ img {
 	}
 	
 	.container p{
-		font-size: 14px;
+		font-size: 100%;
 		line-height: 20px;
 		letter-spacing: 0.3px;
 		margin: 20px 0;
 	}
 	
 	.container span{
-		font-size: 12px;
+		font-size: 100%;
 	}
 	
 	.container a{
 		color: #333;
-		font-size: 13px;
+		font-size: 100%;
 		text-decoration: none;
 		margin: 15px 0 10px;
 	}
@@ -200,7 +265,7 @@ img {
 	.container button{
 		background-color: #356bb2;
 		color: #ECECEC;
-		font-size: 12px;
+		font-size: 100%;
 		padding: 10px 45px;
 		border: 1px solid transparent;
 		border-radius: 8px;
@@ -231,7 +296,7 @@ img {
 		border: 2px, solid,#356bb2;
 		margin: 8px 0;
 		padding: 10px 15px;
-		font-size: 13px;
+		font-size: 80%;
 		border-radius: 8px;
 		width: 100%;
 	}
@@ -353,7 +418,7 @@ padding-left: 20px;
 text-align: start;
 }
 p{
-color: #ECECEC;
+color: black;
 padding-left: 20px;
 text-align: start;
 }
@@ -367,7 +432,7 @@ margin: 0px;
 background-color: #bdbbbb;
 color: black;
 font-family: 'montserrat';
-max-width: 1366px;
+max-width: 1920px;
 }
 /* titulo da pagina */
 .icon{

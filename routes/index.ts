@@ -20,6 +20,13 @@ class IndexRoute {
 
 		res.render("index/login", opcoes);
 	}
+	public async ajudar(req: app.Request, res: app.Response) {
+		let opcoes = {
+			titulo: "Como Ajudar"
+		};
+
+		res.render("index/ajudar", opcoes);
+	}
 
 
 	public async produtos(req: app.Request, res: app.Response) {
