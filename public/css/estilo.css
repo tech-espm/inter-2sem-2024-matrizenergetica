@@ -104,7 +104,7 @@ img {
 	
 	.fundo.azul{
 
-	background-color: #356bb2;
+	background-color: #EFD39F;
 	}
 	.fundo.verde{
 	background-color: #39aeed;
@@ -218,14 +218,6 @@ img {
 	a{
 		color: #ECECEC;
 	}
-	
-	body{
-	margin: 0px auto;
-	background-color: #A7C957;
-	color: black;
-	font-family: 'montserrat';
-	max-width: 1920px;
-	}
 	/* titulo da pagina */
 	.icon{
 	height: 100px;
@@ -269,8 +261,8 @@ img {
 	}
 	
 	.container button{
-		background-color: #356bb2;
-		color: #ECECEC;
+		background-color: whitesmoke;
+		color: black;
 		font-size: 100%;
 		padding: 10px 45px;
 		border: 1px solid transparent;
@@ -435,7 +427,7 @@ padding-bottom: 70px;
 
 body{
 margin: 0px;
-background-color: #bdbbbb;
+background-color: #EFD39F;
 color: black;
 font-family: 'montserrat';
 max-width: 1920px;
@@ -467,7 +459,7 @@ height: 100px;
 	color: white;
 }
 .text-3d{
-	filter:drop-shadow(5px 5px 10px rgba(0,0,0,10.5));
+	filter:drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
 }
 
 

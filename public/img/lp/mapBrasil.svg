@@ -18,7 +18,7 @@
    xmlns:mapsvg="http://mapsvg.com">
   <defs
      id="defs8502">
-    <radialGradient
+    <!-- <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient457"
        id="radialGradient459"
@@ -28,7 +28,7 @@
        fy="411.37091"
        r="977.20813"
        gradientTransform="matrix(0.29121314,0,-2.1010275e-6,0.27211322,-109.93266,154.34128)"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse" /> -->
     <linearGradient
        inkscape:collect="always"
        id="linearGradient457">
