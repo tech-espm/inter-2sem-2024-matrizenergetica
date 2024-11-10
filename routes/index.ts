@@ -27,7 +27,13 @@ class IndexRoute {
 
 		res.render("index/ajudar", opcoes);
 	}
+	public async faq(req: app.Request, res: app.Response) {
+		let opcoes = {
+			titulo: "FAQ"
+		};
 
+		res.render("index/faq", opcoes);
+	}
 
 	public async produtos(req: app.Request, res: app.Response) {
 		let produtoA = {
