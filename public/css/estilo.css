@@ -65,7 +65,7 @@ img {
 	color: black;
 	margin: 5px;
 	font-size: 100%;
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 	align-self: center;
 	border: none;
 	background-color: whitesmoke;
@@ -118,7 +118,6 @@ img {
 	.transicao{
 	width: 100%;
 	height: 100px;
-	background-repeat: no-repeat;  
 	}
 
 	div.coral-limite{
@@ -148,6 +147,9 @@ img {
 	/* formatacao geral */
 	header{
 	padding: 0px;
+	}
+	a{
+		text-decoration: none;
 	}
 	
 	button.peace{
@@ -194,21 +196,27 @@ img {
 
 	.input-busca{
 		min-width: 70%;
+		border-color: #255593;
+		border-style: solid;
 	}
 	button.busca{
 		border: none;
 		background-color: #ECECEC;
-		border-radius: 20%;
+		border-radius: 3px;
 	}
 	.bordado{
 		border-radius: 40px;
-		background-color: #EFD39F;
-		padding: 20px 10%;
+		background-color: #298edd;
+		text-align: center;
 		min-height: 400px;
+		padding-top: 20px;
+		margin-top: 10px;
 	}
 	.titulo{
 		font-weight: bold;
-		margin: 10px;
+		margin-top: 10px;
+		text-align: center;
+		padding: 0px;
 	}
 	.git{
 		background-color: rgb(160, 3, 160);
@@ -217,12 +225,18 @@ img {
 		min-width: 30px;
 		min-height: 30px;
 	}
+	.git:hover{
+		background-color: rgb(205, 7, 205);
+	}
 	.lk{
 		background-color: rgb(42, 42, 251);
 		border-radius: 10px;
 		border: none;
 		min-width: 30px;
 		min-height: 30px;
+	}
+	.lk:hover{
+		background-color: rgb(0, 81, 255);
 	}
 
 	hr{
@@ -305,6 +319,12 @@ img {
 		text-transform: uppercase;
 		margin-top: 10px;
 		cursor: pointer;
+	}
+	.container button:hover{
+		background-color:#5aa621;
+		color: whitesmoke;
+		padding: 10px 50px;
+
 	}
 	
 	.container button.hidden{
@@ -493,6 +513,9 @@ height: 100px;
 }
 .text-3d{
 	filter:drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+}
+.text-4d{
+	filter:drop-shadow(3px 3px 5px rgba(0,0,0,0.5));
 }
 
 

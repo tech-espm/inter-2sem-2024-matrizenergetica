@@ -34,6 +34,14 @@ class IndexRoute {
 
 		res.render("index/faq", opcoes);
 	}
+	public async mapa(req: app.Request, res: app.Response) {
+		let opcoes = {
+			titulo: "Mapa"
+		};
+
+		res.render("index/mapa", opcoes);
+	}
+
 
 	public async produtos(req: app.Request, res: app.Response) {
 		let produtoA = {
