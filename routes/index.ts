@@ -77,6 +77,12 @@ class IndexRoute {
         };
         res.render("index/posts", opcoes);
     }
+	async forum(req, res) {
+        let opcoes = {
+            titulo: "forum"
+        };
+        res.render("index/forum", opcoes);
+    }
 }
 
 export = IndexRoute;
