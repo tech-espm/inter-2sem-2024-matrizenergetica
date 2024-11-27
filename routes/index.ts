@@ -1,4 +1,5 @@
 ﻿import app = require("teem");
+import Usuario = require("../models/usuario");
 
 class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
@@ -43,46 +44,44 @@ class IndexRoute {
 	}
 
 
-	public async produtos(req: app.Request, res: app.Response) {
-		let produtoA = {
-			id: 1,
-			nome: "Produto A",
-			valor: 25
-		};
-
-		let produtoB = {
-			id: 2,
-			nome: "Produto B",
-			valor: 15
-		};
-
-		let produtoC = {
-			id: 3,
-			nome: "Produto C",
-			valor: 100
-		};
-
-		let produtosVindosDoBanco = [ produtoA, produtoB, produtoC ];
-
-		let opcoes = {
-			titulo: "Listagem de Produtos",
-			produtos: produtosVindosDoBanco
-		};
-
-		res.render("index/produtos", opcoes);
-	}
-	async posts(req, res) {
+	
+	public async posts(req, res) {
         let opcoes = {
             titulo: "posts"
         };
         res.render("index/posts", opcoes);
     }
-	async forum(req, res) {
+	public async forum(req, res) {
         let opcoes = {
             titulo: "forum"
         };
         res.render("index/forum", opcoes);
     }
+	@app.http.post()
+	public async criarUsuario(req: app.Request, res: app.Response) {
+		let usuario: Usuario = req.body;
+
+		if (!usuario){
+			res.status(400);
+			res.json("Dados inválidos");
+			return;
+		}
+
+		if (!usuario.usuNome){
+			res.status(400);
+			res.json("Nome inválido");
+			return;
+		}
+
+		await app.sql.connect(async (sql) =>{
+
+			await sql.query("insert into usuario (usuNome, usuMail, usuPass, usuNasc) values (?, ?, ?, ?)", [usuario.usuNome, usuario.usuMail, usuario.usuPass, usuario.usuNasc]);
+
+		});
+
+		res.json(true);
+
+	}
 }
 
 export = IndexRoute;

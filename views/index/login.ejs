@@ -31,19 +31,18 @@
         <form>
             <h1>Registre-se</h1>
             
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="Email">
-			<input type="password" placeholder="Senha">
-			<input type="text" pattern="(\d{2}) \d{5} - \d{4}" \ placeholder="(XX) XXXXX-XXXX">
-			<input type="date" placeholder="Nascimento">
-            <button>Registrar</button>
+            <input id="inputNomeC" type="text" placeholder="Nome">
+            <input id="inputEmailC" type="email" placeholder="Email">
+			<input id="inputSenhaC" type="password" placeholder="Senha">
+			<input id="inputDataC" type="date" placeholder="Nascimento">
+            <button type="button" onclick="criarCadastro()">Registrar</button>
         </form>
     </div>
     <div class="form-container sign-in">
         <form>
             <h1>Entre</h1>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Senha">
+            <input id="inputEmailE" type="email" placeholder="Email">
+            <input id="inputSenhaE" type="password" placeholder="Senha">
             <a href="#">Esqueci minha senha</a>
             <button>LogIn</button>
         </form>
@@ -94,14 +93,130 @@
 
 <script>
     const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
+	const registerBtn = document.getElementById('register');
+	const loginBtn = document.getElementById('login');
 
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-});
+	registerBtn.addEventListener('click', () => {
+		container.classList.add("active");
+	});
 
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});
+	loginBtn.addEventListener('click', () => {
+		container.classList.remove("active");
+	}); 
+
+	async function criarCadastro() {
+		let nomeC = (document.getElementById("inputNomeC")).value.normalize().trim()
+		let emailC = (document.getElementById("inputEmailC")).value.normalize().trim()
+		let senhaC = (document.getElementById("inputSenhaC")).value.normalize().trim()
+		let dataC = (document.getElementById("inputDataC")).value.trim()
+
+		if (!nomeC){
+			console.log("Nome completo vazio!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "Nome completo vazio.",
+				icon: "warning",
+				confirmButtonColor: "rgb(245, 245, 245)"
+			});
+			return;
+		} 
+		else {
+			console.log("Nome: " + nomeC);
+		};
+		if (!emailC){
+			console.log("E-mail está vazio!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "E-mail está vazio.",
+				icon: "warning",
+				confirmButtonColor: "rgb(245, 245, 245)"
+			});
+			return;
+		} 
+		else {
+			console.log("E-mail: " + emailC);
+		};
+		if (!senhaC){
+			console.log("Senha está vazia!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "Senha está vazia.",
+				icon: "warning",
+				confirmButtonColor: "rgb(245, 245, 245)"
+			});
+			return;
+		} 
+		else {
+			console.log("Senha: " + senhaC);
+		};
+		if (!dataC){
+			console.log("Data de nascimento está vazia!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "Data de nascimento está vazia.",
+				icon: "warning",
+				confirmButtonColor: "rgb(245, 245, 245)"
+			});
+			return;
+		} 
+		else {
+			console.log("Data: " + dataC);
+		};
+		let cliente = {
+			usuNome: nomeC,
+			usuMail: emailC,
+			usuPass: senhaC,
+			usuNasc: dataC
+		};
+		
+		try {
+			let response = await fetch("/criarUsuario", {
+				method: "POST",
+				body: JSON.stringify(cliente),
+				headers: {
+					"content-type": "application/json"
+				}
+			});
+			console.log(response.body)
+			console.log(response.status)
+			if (!response.ok) {
+				console.log("Ocorreu um erro ao se criar o cadastro.");
+				Swal.fire({
+					title: "Oops..☠☠☠ ",
+					text: "Ocorreu um erro ao se cadastrar",
+					icon: "error",
+					confirmButtonColor: "whitesmoke"
+				});
+				return;
+			}
+
+			nomeC.value = "";
+			emailC.value = "";
+			senhaC.value = "";
+			dataC.value = "";
+
+			Swal.fire({
+				title: "Parabéns!",
+          		text: "Cadastro criado com sucesso!",
+          		icon: "success",
+          		confirmButtonColor: "#5aa621"
+			});
+			console.log("Cadastro criado com sucesso!");
+		}
+		catch (ex) {
+			Swal.fire({
+				title: "Oops...",
+          		text: "Ocorreu um erro de rede ao criar o cliente: " + ex.message,
+          		icon: "error",
+          		confirmButtonColor: "#b73501"
+			});
+			console.log("Ocorreu um erro de rede ao criar o cliente " + ex.message);
+		}
+		
+	}
+
 </script>
