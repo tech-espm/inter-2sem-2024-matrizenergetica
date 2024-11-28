@@ -129,15 +129,16 @@ img {
 		background-color: #386641;
 		padding-left: 20px;
 	}
-	div.wwf{
-		background-color: #b73501;
-		padding-left: 20px;
-	}
 	img.coral-peace{
 		margin-left: -30px;
 		margin-bottom: -30px;
 		max-width: 100%;
 	}
+	div.wwf{
+		background-color: #b73501;
+		padding-left: 20px;
+	}
+	
 	img.wwf{
 		margin-right: -30px;
 		margin-bottom: -30px;
@@ -548,9 +549,11 @@ button.carrossel:hover{
 }
 .estados{
 	z-index: 0;
+	fill: #5aa621;
 }
 .estados:hover{
-	z-index: 100;
+	z-index: 1;
+	fill: #3a8609;
 	filter:drop-shadow(3px 3px 5px rgba(240, 240, 240, 0.5));
 }
 

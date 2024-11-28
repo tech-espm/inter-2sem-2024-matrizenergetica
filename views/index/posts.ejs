@@ -29,6 +29,12 @@
 <div class="container-fluid">
     <div class="row">
 		<div class="col-md-4 fundo verde">
+			<% if (!usuario) { %>
+				<button type="button"> 🎭🐧 </button>
+				<% } else { %>
+					<button onclick="Nao()" type="button"> Postar </button>
+			<% } %>
+			
 		</div>
         <div class="col-md-4 fundo verde">
 			<div style="padding: 5px 5%; margin: 20px;">
@@ -88,3 +94,19 @@
 	  </g>
 </svg>
 </div>
+
+<script>
+	function Nao(){
+		Swal.fire({
+			title: "Atenção!",
+			type: 'warning',
+			text: "Para conseguir postar você prescisa estar logado.",
+			icon: "warning",
+			confirmButtonColor: "rgba(248,187,134,255)"
+
+			
+		}).then(() => {
+			window.location = "/login"
+		}) ;
+	}
+</script>

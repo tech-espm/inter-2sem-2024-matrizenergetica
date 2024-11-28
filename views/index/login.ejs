@@ -1,3 +1,8 @@
+<style>
+	.teste{
+		color: whitesmoke;
+	}
+</style>
 <div class="transicao">
 	<svg
 		width="100%"
@@ -44,7 +49,7 @@
             <input id="inputEmailE" type="email" placeholder="Email">
             <input id="inputSenhaE" type="password" placeholder="Senha">
             <a href="#">Esqueci minha senha</a>
-            <button>LogIn</button>
+            <button type="button" onclick="fazerLogin()">LogIn</button>
         </form>
     </div>
     <div class="toggle-container">
@@ -55,7 +60,7 @@
                 <button class="" id="login">Fazer login</button>
             </div>
             <div class="toggle-panel toggle-right">
-                <h1>Ainda não tem uma conta?</h1>
+                <h1 class="teste">Ainda não tem uma conta?</h1>
                 <p class="branco"	>Cadastre-se para ter acesso completo!</p>
                 <button class="" id="register">Cadastre-se</button>
             </div>
@@ -103,11 +108,16 @@
 	loginBtn.addEventListener('click', () => {
 		container.classList.remove("active");
 	}); 
+	let regExpAmp = /\&/g, regExpLt = /</g, regExpGt = />/g;
+
+	function encode(x) {
+		return (x ? x.replace(regExpAmp, "&amp;").replace(regExpLt, "&lt;").replace(regExpGt, "&gt;") : "");
+	}
 
 	async function criarCadastro() {
-		let nomeC = (document.getElementById("inputNomeC")).value.normalize().trim()
-		let emailC = (document.getElementById("inputEmailC")).value.normalize().trim()
-		let senhaC = (document.getElementById("inputSenhaC")).value.normalize().trim()
+		let nomeC = encode((document.getElementById("inputNomeC")).value.normalize().trim())
+		let emailC = encode((document.getElementById("inputEmailC")).value.normalize().trim())
+		let senhaC = encode((document.getElementById("inputSenhaC")).value.normalize().trim())
 		let dataC = (document.getElementById("inputDataC")).value.trim()
 
 		if (!nomeC){
@@ -117,7 +127,8 @@
 				type: 'warning',
 				text: "Nome completo vazio.",
 				icon: "warning",
-				confirmButtonColor: "rgb(245, 245, 245)"
+				confirmButtonColor: "rgba(248,187,134,255)"
+				
 			});
 			return;
 		} 
@@ -131,7 +142,7 @@
 				type: 'warning',
 				text: "E-mail está vazio.",
 				icon: "warning",
-				confirmButtonColor: "rgb(245, 245, 245)"
+				confirmButtonColor: "rgba(248,187,134,255)"
 			});
 			return;
 		} 
@@ -145,7 +156,7 @@
 				type: 'warning',
 				text: "Senha está vazia.",
 				icon: "warning",
-				confirmButtonColor: "rgb(245, 245, 245)"
+				confirmButtonColor: "rgba(248,187,134,255)"
 			});
 			return;
 		} 
@@ -159,7 +170,7 @@
 				type: 'warning',
 				text: "Data de nascimento está vazia.",
 				icon: "warning",
-				confirmButtonColor: "rgb(245, 245, 245)"
+				confirmButtonColor: "rgba(248,187,134,255)"
 			});
 			return;
 		} 
@@ -218,5 +229,85 @@
 		}
 		
 	}
+	async function fazerLogin() {
+		let emailE = encode((document.getElementById("inputEmailE")).value.normalize().trim())
+		let senhaE = encode((document.getElementById("inputSenhaE")).value.normalize().trim())
 
+		if (!emailE){
+			console.log("E-mail está vazio!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "E-mail está vazio.",
+				icon: "warning",
+				confirmButtonColor: "rgba(248,187,134,255)"
+			});
+			return;
+		} 
+		else {
+			console.log("E-mail: " + emailE);
+		};
+		if (!senhaE){
+			console.log("Senha está vazia!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "Senha está vazia.",
+				icon: "warning",
+				confirmButtonColor: "rgba(248,187,134,255)"
+			});
+			return;
+		} 
+		else {
+			console.log("Senha: " + senhaE);
+		};
+		let lg = {
+			usuMail: emailE,
+			usuPass: senhaE
+		};
+		try {
+			let response = await fetch("/efetuarLogin", {
+				method: "POST",
+				body: JSON.stringify(lg),
+				headers: {
+					"content-type": "application/json"
+				}
+			});
+			console.log(response.body)
+			console.log(response.status)
+			if (!response.ok) {
+				console.log("Ocorreu um erro ao se fazer login.");
+				Swal.fire({
+					title: "Oops..☠☠☠ ",
+					text: "Ocorreu um erro ao logar",
+					icon: "error",
+					confirmButtonColor: "whitesmoke"
+				});
+				return;
+			}
+
+			
+			emailE.value = "";
+			senhaE.value = "";
+			
+
+			Swal.fire({
+				title: "Parabéns!",
+          		text: "Login feito com sucesso!",
+          		icon: "success",
+          		confirmButtonColor: "#5aa621"
+			});
+			console.log("Cadastro criado com sucesso!");
+		}
+		catch (ex) {
+			Swal.fire({
+				title: "Oops...",
+          		text: "Ocorreu um erro de rede ao fazer login: " + ex.message,
+          		icon: "error",
+          		confirmButtonColor: "#b73501"
+			});
+			console.log("Ocorreu um erro de rede ao fazer o login " + ex.message);
+		}
+
+	}
 </script>

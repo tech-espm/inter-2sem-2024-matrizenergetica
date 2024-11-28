@@ -1,5 +1,5 @@
 import app = require("teem");
-CREATE DATABASE IF NOT EXISTS eco6ense DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS ecoense DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_0900_ai_ci;
 
 use ecosense;
 
@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS `ecosense`.`usuario` (
   `usuNasc` DATE NOT NULL,
   `exclusao` DATETIME NULL,
   PRIMARY KEY (`idUsu`),
-  INDEX `exclusao_IX` (`exclusao` ASC) VISIBLE)
+  INDEX `exclusao_IX` (`exclusao` ASC) VISIBLE,
+  UNIQUE INDEX `usuMail_UNIQUE` (`usuMail` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
