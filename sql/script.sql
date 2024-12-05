@@ -1,5 +1,5 @@
 import app = require("teem");
-CREATE DATABASE IF NOT EXISTS ecoense DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS ecosense DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_0900_ai_ci;
 
 use ecosense;
 

@@ -1,6 +1,26 @@
 <!--
 	Barra padrão do Bootstrap
 -->
+<script>
+  let usuario = <%- JSON.stringify(usuario) %>;
+</script>
+
+<script>
+  <%  if (usuario) { %>
+    function Penguin() {
+      let Masked = ["/public/img/lp/Ale.jpeg", "/public/img/lp/Hugo.png",  "/public/img/lp/icone.png", "/public/img/lp/Theo.jpg", "/public/img/lp/logo.svg", "/public/img/lp/icon.svg"];
+      let i = document.getElementById("🎭🐧");
+      let icone = Masked[Math.floor(Math.random() * Masked.length)]
+      let refaz = `
+
+      <img  src="${icone}" height="30px" class="redondo" alt=""> <p class="center"><%- (usuario.usuNome) %></p>
+      `;
+      i.innerHTML= refaz
+      }
+    <% }  %>
+
+</script>
+
 
  <nav class="navbar navbar-expand-lg" style="background-color: #356bb2;">
     <div class="container-fluid">
@@ -13,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active separa" aria-current="page" href="/posts">Posts</a>
+            <a class="nav-link active separa" aria-current="page" href="/noticias">Notícias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link separa" href="/forum">Fórum</a>
@@ -42,12 +62,12 @@
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
               </svg> Fazer Login
             </button></a>
-          <% } else { %> <button class="btn btn-outline-sucess bota">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle perfil" viewBox="0 0 16 16">
-              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-            </svg> <p>${usuario.usuNome}</p>
+          <% } else { %> <button id="🎭🐧" style="border-radius: 60%;" class="btn btn-outline-sucess bota">
+            
           </button>
+            <script>
+              Penguin()
+            </script>
           <% }  %>
         </div>
       </div>
