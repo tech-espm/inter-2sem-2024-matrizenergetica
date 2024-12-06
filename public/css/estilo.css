@@ -212,6 +212,7 @@ img {
 		min-height: fit-content;
 		padding-top: 20px;
 		margin-top: 10px;
+		min-height: 300px;
 	}
 	.titulo{
 		font-weight: bold;

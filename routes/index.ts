@@ -124,7 +124,7 @@ class IndexRoute {
 		console.log("Usuario enviado", usuario)
 
 		let opcoes = {
-            titulo: "noticias",
+            titulo: "Notícias",
 			usuario: usuario
         };
         res.render("index/noticias", opcoes);
@@ -140,7 +140,7 @@ class IndexRoute {
 		});
 		
 		let opcoes = {
-            titulo: "forum",
+            titulo: "Fórum",
 			usuario: usuario,
 			postados: todos
         };
