@@ -38,6 +38,23 @@ class IndexRoute {
 
 		res.render("index/sobre", opcoes);
 	}
+
+	public async pesquisa(req: app.Request, res: app.Response) {
+		
+		let usuario = await conferirCookie(req);
+		/* if (!usuario) {
+			res.redirect("/login");
+			return;
+		} */
+		
+
+		let opcoes = {
+			titulo: "Pesquisa",
+			usuario: usuario 
+		};
+
+		res.render("index/pesquisa", opcoes);
+	}
 	
 	public async login(req: app.Request, res: app.Response) {
 		
