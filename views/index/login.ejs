@@ -119,6 +119,7 @@
 		let emailC = encode((document.getElementById("inputEmailC")).value.normalize().trim())
 		let senhaC = encode((document.getElementById("inputSenhaC")).value.normalize().trim())
 		let dataC = (document.getElementById("inputDataC")).value.trim()
+		let data =  new Date();
 
 		if (!nomeC){
 			console.log("Nome completo vazio!")
@@ -163,8 +164,8 @@
 		else {
 			console.log("Senha: " + senhaC);
 		};
-		if (!dataC){
-			console.log("Data de nascimento está vazia!")
+		if (!dataC || dataC > data){
+			console.log("Data de nascimento está vazia! ou inválida")
 			Swal.fire({
 				title: "Atenção!",
 				type: 'warning',
@@ -215,6 +216,8 @@
           		text: "Cadastro criado com sucesso!",
           		icon: "success",
           		confirmButtonColor: "#5aa621"
+			}).then(() => {
+				window.location = "/login"
 			});
 			console.log("Cadastro criado com sucesso!");
 		}
@@ -296,7 +299,9 @@
           		text: "Login feito com sucesso!",
           		icon: "success",
           		confirmButtonColor: "#5aa621"
-			});
+			}).then(() => {
+				window.location = "/"
+			}) ;;
 			console.log("Cadastro criado com sucesso!");
 		}
 		catch (ex) {

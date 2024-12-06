@@ -5,6 +5,43 @@
     .cor{
         background-color: #3998dd;
     }
+	
+	.popover {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 9999;
+		border-radius: 0px;
+	  }
+
+	  .popover-content {
+		top: 50%;
+		left: 50%;
+		background: white;
+		padding: 20px;
+		border-radius: 8px;
+		width: 90%;
+		max-width: 400px;
+		text-align: center;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	  }
+	  textarea {
+		width: 100%;
+		height: 100px;
+		margin-bottom: 10px;
+	  }
+	  .hidden {
+		display: none;
+	  }
+	  .locked{
+		overflow: hidden;
+	  }
 </style>
 
 <div class="transicao">
@@ -35,28 +72,53 @@
 	  </g>
 </svg>
 </div>
+<div id="pop" class="hidden">
+	<div id="pop-cont" class="fundo verde hidden">
+		<input style="border-radius: 5px; border: none" id="inputTitulo" placeholder="Insira o titulo" maxlength="45">
+		<textarea style="border-radius: 5%;" id="inputCont" placeholder="Escreva seu post aqui"></textarea>
+		<button style="border-radius: 10%;" class="btn btn-outline-sucess bota" onclick="criaraPost()">Postar</button>
+		<button style="border-radius: 10%;" class="btn btn-outline-sucess bota" onclick="Fechar()">Fechar</button>
+	</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-md-4 fundo verde">
+			<% if (!usuario) { %>
+				<button onclick="Socorro()" type="button"> 🎭🐧 </button>
+				<% } else { %>
+					<button class="btn btn-outline-sucess bota" id="openPopover" onclick="abrirPost()" type="button"> Escrever Post </button>
+			<% } %>
+			
+		</div>
+        <div class="col-md-4 fundo verde">
+
+        </div>
+        <div class="col-md-4 fundo verde">
+		</div>
+    </div>
+</div>
 <div class="container-fluid fundo verde" style="padding: 3px 3% 15px">
     <div class="row">
-        <div class="col-md-1 fundo verde">
+        <div id="off" class="col-md-1 fundo verde">
 
         </div>
 
-        <div class="col-md-8">
+        <div id="off" class="col-md-8">
             <div style="padding: 5px 5%; margin: 20px;">
             	<input type="text" class="input-busca"> 
 				<button id="busca" onclick="buscar()" class="busca">Buscar</button>
 			</div>
             <div class="container-fluid">
-                <div class="col-md-12">
-                    <div class="bordado text-4d">
-                        <img style="max-width: 50%;" src="public/img/holder_image.png" alt="">
-                        <p class="titulo">Título</p>
-                    </div>
-                    <div class="bordado text-4d">
-                        <img style="max-width: 50%;" src="public/img/holder_image.png" alt="">
-                        <p class="titulo">Título</p>
-                    </div>
-                </div>
+					<div id="colunaf" class="col-md-12">
+						<% for (let i = 0; i < postados.length; i++) {%>
+						 <div class="bordado text-4d"> 
+							<h1 class="titulo"><%- (postados[postados.length - i - 1].posTitu) %></h1>
+							<p class="conteudo"><%- (postados[postados.length - i - 1].posCont) %></p>
+							<p class="autor" style="text-align: end; padding-right:5%;"><%- (postados[postados.length - i - 1].usuNome) %></p>
+						</div>
+						<% } %>
+					</div>
             </div>
         </div>
 
@@ -72,3 +134,219 @@
         </div>
     </div>
 </div>
+<div class="transicao">
+	<svg
+		width="100%"
+		height="100%"
+		viewBox="0 0 323.52756 204.01889"
+		version="1.1"
+		id="svg5"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:svg="http://www.w3.org/2000/svg"
+		preserveAspectRatio="none">
+		<defs
+		  id="defs2" />
+		<g
+		  id="layer1">
+		  <rect
+			style="fill:black;fill-opacity:1;stroke-width:1.05"
+			id="rect2721"
+			width="323.52756"
+			height="204.01889"
+			x="0"
+			y="0" />
+		  <path
+			id="rect451"
+			style="fill:#39aeed;stroke-width:1.05;fill-opacity:1"
+			d="m 0,0 h 323.52756 l -10e-6,102.00945 c 0,0 0,-102.0094472655646 -161.76377,0 C 0,204.0189 0,102.00945 0,102.00945 Z" />
+	  </g>
+</svg>
+</div>
+<script>
+	let pop = document.getElementById("pop");
+	let popcont = document.getElementById("pop-cont");
+	let coluna = document.getElementById("colunaf");
+	function abrirPost() {
+		pop.classList.add("popover");
+		popcont.classList.add("popover-content");
+		pop.classList.remove("hidden");
+		popcont.classList.remove("hidden");
+		coluna.classList.remove("col-md-12")
+		coluna.classList.add("col-md-9")
+		coluna.classList.add("offset-md-3")
+		
+		
+	}
+
+	function Fechar() {
+		pop.classList.remove("popover");
+		popcont.classList.remove("popover-content");
+		pop.classList.add("hidden");
+		popcont.classList.add("hidden");
+		coluna.classList.remove("col-md-9");
+		coluna.classList.remove("offset-md-3");
+		coluna.classList.add("col-md-12")
+	}
+
+	function Socorro(){
+		Swal.fire({
+			title: "Você deve estar logado!",
+			  text: "Para criar um post você deve estar logado!",
+			  icon: "warning",
+			  confirmButtonColor: "rgba(248,187,134,255)"
+		}).then(() => {
+			window.location = "/login"
+		});
+	}
+</script>
+
+<script>
+	let regExpAmp = /\&/g, regExpLt = /</g, regExpGt = />/g;
+
+	function encode(x) {
+		return (x ? x.replace(regExpAmp, "&amp;").replace(regExpLt, "&lt;").replace(regExpGt, "&gt;") : "");
+	}
+
+	async function criaraPost() {
+        //<%  if (usuario){ %>
+            let idUsuarioP = <%- (usuario.idUsu) %>;
+        //<% } else {%>
+            console.log("Fera dms")
+			return;
+        //<% } %> 
+
+		let titulo = encode((document.getElementById("inputTitulo")).value.trim());
+		let conteudo = encode((document.getElementById("inputCont")).value.trim());
+		const dataHoje = new Date();
+		console.log(dataHoje)
+		let mes = String(dataHoje.getMonth() + 1).padStart(2, '0');
+		let dia = String(dataHoje.getDate()).padStart(2, '0');
+		let ano = dataHoje.getFullYear();
+		let data = String(ano + "-" + mes + "-" + dia)
+
+
+		if (!titulo){
+			console.log("Nome completo vazio!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "Titulo está vazio.",
+				icon: "warning",
+				confirmButtonColor: "rgba(248,187,134,255)"
+				
+			});
+			return;
+		} 
+		else {
+			console.log("Nome: " + titulo);
+		};
+		if (!conteudo){
+			console.log("Conteudo do post está vazio!")
+			Swal.fire({
+				title: "Atenção!",
+				type: 'warning',
+				text: "Conteudo do post está vazio.",
+				icon: "warning",
+				confirmButtonColor: "rgba(248,187,134,255)"
+			});
+			return;
+		} 
+		else {
+			console.log("Post: " + conteudo);
+		};
+
+		
+		let post = {
+			posTitu: titulo,
+			posCont: conteudo,
+			posView: 10,
+			posData: data,
+            idUsu: idUsuarioP
+		};
+		
+		try {
+			let response = await fetch("/criarPost", {
+				method: "POST",
+				body: JSON.stringify(post),
+				headers: {
+					"content-type": "application/json"
+				}
+			});
+			console.log(response.body)
+			console.log(response.status)
+			if (!response.ok) {
+				console.log("Ocorreu um erro ao se criar o post.");
+				Swal.fire({
+					title: "Oops..☠☠☠ ",
+					text: "Ocorreu um erro ao criar post",
+					icon: "error",
+					confirmButtonColor: "whitesmoke"
+				});
+				return;
+			}
+
+			titulo.value = "";
+			conteudo.value = "";
+			data.value = "";
+
+			Swal.fire({
+				title: "Parabéns!",
+          		text: "Post criado com sucesso!",
+          		icon: "success",
+          		confirmButtonColor: "#5aa621"
+			}).then(() => {
+				window.location = "/forum"
+			});
+			console.log("Post criado com sucesso!");
+		}
+		catch (ex) {
+			Swal.fire({
+				title: "Oops...",
+          		text: "Ocorreu um erro de rede ao criar o post: " + ex.message,
+          		icon: "error",
+          		confirmButtonColor: "#b73501"
+			});
+			console.log("Ocorreu um erro de rede ao criar o post " + ex.message);
+		}
+    }
+
+        /*async function listarPosts() {
+			try {
+				let response = await fetch("/carregaPost");
+
+				let lista = await response.json();
+
+				console.log("Pessoas cadastradas: " + lista.length);
+
+				for (let i = 0; i < lista.length; i++) {
+					console.log("Id: " + lista[i].idUsu);
+					console.log("Titulo: " + lista[i].posTitu);
+					console.log("Conteudo: " + lista[i].posCont);
+					console.log("Data: " + lista[i].posData);
+				}
+				if (!response.ok) {
+					console.log("Ocorreu um erro ao se criar o post.");
+					Swal.fire({
+						title: "Oops..☠☠☠ ",
+						text: "Ocorreu um erro ao criar post",
+						icon: "error",
+						confirmButtonColor: "whitesmoke"
+					});
+					return;
+				}	
+			}
+			catch (ex) {
+				Swal.fire({
+					title: "Oops...",
+					  text: "Ocorreu um erro de rede ao criar o post: " + ex.message,
+					  icon: "error",
+					  confirmButtonColor: "#b73501"
+				});
+				console.log("Ocorreu um erro de rede ao criar o post " + ex.message);
+			}
+			
+
+		}
+		listarPosts()*/
+	
+</script>
