@@ -93,7 +93,8 @@
 <div class="container-fluid fundo verde">
 	<div class="row">
 		<div class="col-md-12">
-		    <h1 style="margin-top: 20px;" class="center">Interaja com um Estado!</h1> <a href="/mapa">Fechar Todos</a>
+		    <h1 style="margin-top: 20px;" class="center">Interaja com um Estado!</h1> 
+			<p style="text-align: end;"><a href="/mapa"><button style="border-radius: 5px;" class="bota">Fechar Todos </button></a></p>
 			<div id="mapa">
 			<svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://mapsvg.com" xmlns:ns2="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns3="http://www.inkscape.org/namespaces/inkscape" width="100%" height="100%" ns1:geoViewBox="-74.008595 5.275696 -34.789914 -33.743888" version="1.1" id="svg8498" ns2:docname="mapBrasil.svg" ns3:version="1.2.2 (732a01da63, 2022-12-09)" viewBox="-270 0 1200 700">
 		        <defs id="defs8502">
@@ -136,117 +137,389 @@
 			</div>
 		</div>
 	</div>
-</div><!-- Janelas dos Estados -->
+</div>
 
-<!-- Sudeste -->
+<!-- Janelas dos Estados -->
 
-<div class="janela hidden" id="BR-SPw">
+<!-- Centro-Oeste -->
+
+<div class="janela hidden" id="BR-DFw">
 	<div class="janela-titulo">
-		São Paulo 🎭🐧🎭🐧🎭🐧
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Distrito Federal
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-DFw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-SPw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 108 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/df/dfProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 20,2%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 6.655 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/df/dfConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.283 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-
-<div class="janela hidden" id="BR-RJw">
+<div class="janela hidden" id="BR-GOw">
 	<div class="janela-titulo">
-		Rio de Janeiro
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Goiás
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-GOw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-RJw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 28.468 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/go/goProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 11,3%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 16.419 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/go/goConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.484 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-
-<div class="janela hidden" id="BR-MGw">
+<div class="janela hidden" id="BR-MTw">
 	<div class="janela-titulo">
-		Minas Gerais
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Mato Grosso
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-MTw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-MGw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 14.146 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/mt/mtProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 12,8%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 8.849 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/mt/mtConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.710 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-
-<div class="janela hidden" id="BR-ESw">
+<div class="janela hidden" id="BR-MSw">
 	<div class="janela-titulo">
-		Espírito Santo
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Mato Grosso do Sul
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-MSw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-ESw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 22.853 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/ms/msProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 11,1%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 7.748 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/ms/msConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.922 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 <!-- Sul -->
 
-<div class="janela hidden" id="BR-PRw">
-	<div class="janela-titulo">
-		Paraná 🎭🐧
-	</div>
-	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-PRw')">Fechar</button>
-	</div>
-</div>
-
-
 <div class="janela hidden" id="BR-RSw">
 	<div class="janela-titulo">
-		Rio Grande do Sul
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Rio Grande do Sul
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-RSw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-RSw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 36.653 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/rs/rsProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 12,3%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 30.893 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/rs/rsConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.747 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 
 <div class="janela hidden" id="BR-SCw">
 	<div class="janela-titulo">
-		Santa Catarina
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Santa Catarina
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-SCw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-SCw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 31.262 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/sc/scProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 7,6%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 24.704 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/sc/scConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 3.623 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<!-- Centro-Oeste -->
-
-<div class="janela hidden" id="BR-MSw">
+<div class="janela hidden" id="BR-PRw">
 	<div class="janela-titulo">
-		Mato Grosso do Sul
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Paraná
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-PRw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-MSw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 99.801 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/pr/prProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 7,4%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 32.467 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/pr/prConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.908 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="janela hidden" id="BR-GOw">
+<!-- Sudeste -->
+
+<div class="janela hidden" id="BR-SPw">
 	<div class="janela-titulo">
-		Goiás
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					São Paulo
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-SPw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-GOw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 63.398 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/sp/spProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 14,3%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 146.003 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/sp/spConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 3.289 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 
-<div class="janela hidden" id="BR-DFw">
+<div class="janela hidden" id="BR-RJw">
 	<div class="janela-titulo">
-		Distrito Federal
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Rio de Janeiro
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-RJw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-DFw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 59.121 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/rj/rjProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 17,3%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 53.974 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/rj/rjConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 3.261 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
-
-<div class="janela hidden" id="BR-MTw">
+<div class="janela hidden" id="BR-ESw">
 	<div class="janela-titulo">
-		Mato Grosso
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Espírito Santo
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-ESw')">X</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="janela-corpo">
-		<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-MTw')">Fechar</button>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 9.021 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/es/esProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 12,7%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 16.568 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/es/esConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 4.216 kWh</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="janela hidden" id="BR-MGw">
+	<div class="janela-titulo">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 move">
+					Minas Gerais
+				</div>
+				<div class="col-sm-2 move"></div>
+				<div class="col-sm-4 move">
+					<button style="border-radius: 5px;" class="x" onclick="closeInfo('BR-MGw')">X</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="janela-corpo">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="gwh">Produção Total: 35.160 GWh</p>
+					<p class="gwh">Método de produção:</p>
+					<img class="estado" src="public/img/mapa/mg/mgProd.png" alt="">
+					<p class="gwh">Perdas de energia na distribuição: 14,9%</p>
+				</div>
+				<div class="col-sm-6">
+					<p class="gwh">Consumo Total: 56.230 GWh</p>
+					<p class="gwh">% do consumo por setor:</p>
+					<img class="estado" src="public/img/mapa/mg/mgConsu.png" alt="">
+					<p class="gwh">Consumo por habitante: 2.694 kWh</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -571,7 +844,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-3 move">
-					Tocantis
+					Tocantins
 				</div>
 				<div class="col-sm-6 move"></div>
 				<div class="col-sm-3 move">
@@ -840,11 +1113,25 @@
 
 <script>
 	//window.location.href = "/forum";
+	let tmp = document.getElementsByClassName("janela");
+	let janelas = [];
+	let janelaArrastando = null;
+	let deltaX = 0, deltaY = 0;
 
 	function updateJanela(stateId) {
 		let newId = stateId + "w"
 		let janela = document.getElementById(newId);
 		janela.classList.remove("hidden");
+		for (let i = 0; i < janelas.length; i++) {
+			if (janelas[i] === janela) {
+				janelas.splice(i, 1);
+				janelas.push(janela);
+				break;
+			}
+		}
+		for (let i = 0; i < tmp.length; i++) {
+			janelas[i].style.zIndex = i;
+		}
 	};
 
 	document.querySelectorAll("path").forEach((state) => {
@@ -853,10 +1140,7 @@
 		});
 	});
 
-	let janelas = [];
-		let janelaArrastando = null;
-		let deltaX = 0, deltaY = 0;
-
+	
 	document.body.addEventListener("mousedown", function (ev) {
 		if (ev.target.tagName !== "DIV" || !ev.target.classList.contains("move")) {
 			return;
@@ -902,7 +1186,6 @@
 	});
 
 	function prepararZ() {
-		let tmp = document.getElementsByClassName("janela");
 		for (let i = 0; i < tmp.length; i++) {
 			janelas.push(tmp[i]);
 			janelas[i].style.zIndex = i;
