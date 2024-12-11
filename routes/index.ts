@@ -134,7 +134,7 @@ class IndexRoute {
 		let todos = []
 		await app.sql.connect(async (sql) =>{
 
-			todos = await sql.query("select posTitu, posCont, posView, posData, usuNome from Post p inner join usuario u on p.idUsu = u.idUsu where p.exclusao is null;");
+			todos = await sql.query("select idPost, posTitu, posCont, posView, posData, usuNome from Post p inner join usuario u on p.idUsu = u.idUsu where p.exclusao is null;");
 			
 			
 		});
@@ -279,6 +279,66 @@ class IndexRoute {
 
 		res.json(true);
 
+	}
+	public async post(req: app.Request, res: app.Response) {
+		let usuario = await conferirCookie(req);
+		let idpost = parseInt(req.query["idPost"] as string);
+	
+		let opcoes = {
+			titulo: "post",
+			post: null,
+			usuario: usuario
+		};
+	
+		await app.sql.connect(async (sql) => {
+			let lista = await sql.query(`
+				select posTitu, PosCont, PosData, u.Usunome 
+   				   from post p
+				   inner join usuario u on u.idusu = p.idusu
+				   where idPost = ?;
+			`, [idpost]);
+			console.log(lista)
+			opcoes.post = lista[0];
+		});
+	
+		res.render("index/post", opcoes);
+	}
+	public async editarPost(req: app.Request, res: app.Response) {
+		let post: Post = req.body;
+
+		if (!post){
+			res.status(400);
+			res.json("Dados inválidos");
+			return;
+		}
+
+		if (!post.posTitu){
+			res.status(400);
+			res.json("Titulo inválido");
+			return;
+		}
+
+		if (!post.posCont){
+			res.status(400);
+			res.json("Conteudo inválido");
+			return;
+		}
+
+		if (!post.idUsu){
+			res.status(400);
+			res.json("ID inválida");
+			return;
+		}
+
+		await app.sql.connect(async (sql) =>{
+			await sql.beginTransaction();
+
+			await sql.query("update post set posTitu = ?, posCont = ?, posData = now() where idusu = ?", [post.posTitu, post.posCont, post.idUsu]);
+
+			await sql.commit();
+		});
+
+		res.json(true)
 	}
 }
 
