@@ -292,7 +292,7 @@ class IndexRoute {
 	
 		await app.sql.connect(async (sql) => {
 			let lista = await sql.query(`
-				select posTitu, PosCont, PosData, u.Usunome 
+				select idPost, posTitu, PosCont, PosData, u.Usunome, p.idUsu 
    				   from post p
 				   inner join usuario u on u.idusu = p.idusu
 				   where idPost = ?;
