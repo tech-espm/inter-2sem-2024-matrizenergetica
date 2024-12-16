@@ -145,6 +145,7 @@ class IndexRoute {
 			postados: todos
         };
 		console.log(opcoes.postados)
+		console.log(opcoes.usuario)
         res.render("index/forum", opcoes);
     }
 
@@ -300,9 +301,12 @@ class IndexRoute {
 			console.log(lista)
 			opcoes.post = lista[0];
 		});
-	
+
+		console.log(opcoes.post)
+		console.log(opcoes.usuario)
 		res.render("index/post", opcoes);
 	}
+	@app.http.post()
 	public async editarPost(req: app.Request, res: app.Response) {
 		let post: Post = req.body;
 
