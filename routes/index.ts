@@ -55,6 +55,40 @@ class IndexRoute {
 
 		res.render("index/pesquisa", opcoes);
 	}
+
+	public async cop(req: app.Request, res: app.Response) {
+		
+		let usuario = await conferirCookie(req);
+		/* if (!usuario) {
+			res.redirect("/login");
+			return;
+		} */
+		
+
+		let opcoes = {
+			titulo: "Cop 30",
+			usuario: usuario 
+		};
+
+		res.render("index/cop", opcoes);
+	}
+
+	public async rs(req: app.Request, res: app.Response) {
+		
+		let usuario = await conferirCookie(req);
+		/* if (!usuario) {
+			res.redirect("/login");
+			return;
+		} */
+		
+
+		let opcoes = {
+			titulo: "Enchente",
+			usuario: usuario 
+		};
+
+		res.render("index/rs", opcoes);
+	}
 	
 	public async login(req: app.Request, res: app.Response) {
 		

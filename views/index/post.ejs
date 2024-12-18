@@ -1,3 +1,14 @@
+<style>
+    h2{
+    font-weight: bold;
+    }
+
+    p{
+        font-size: large;
+    }
+
+</style>
+
 <script>
     let post = <%- JSON.stringify(post)  %>
     console.log(post)
@@ -37,31 +48,30 @@
         <div class="col-md-6 offset-md-3">
             <div class="bordado">
                 <% if ((!usuario) || ((usuario.idUsu) != (post.idUsu))) {%>
-                        <div class="row">
-                            <div class="col-sm-9">
+                        <div style="padding: 10px;" class="row">
+                            <div class="col-sm-8">
                                 <h2><%- (post.posTitu) %></h2> 
                             </div>
                             
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 <p>Autor: <%- (post.Usunome)  %></p>
                             </div>
                         </div>
-                        <p><%- (post.PosCont) %></p>
-                        <p>Data de Postagem: <%- (post.PosData)  %></p>
+                        <p style="text-align: center; min-height: 140px;"><%- (post.PosCont) %></p>
+                        <p style="margin-top: 10px;">Data de Postagem: <%- (post.PosData)  %></p>
                 <% } else { %>
                     <% if ((usuario.idUsu) == (post.idUsu)){ %>
                         <div class="row">
-                            <div class="col-sm-3">
-                                <textarea id="editTitu" maxlength="45" style="margin-left: 15%;"><%- (post.posTitu) %></textarea>  
+                            <div class="col-sm-8" style="align-content: start;">
+                                <textarea id="editTitu" maxlength="45" style="height: 30px; font-size: larger; font-weight: bold; margin-top: 10px;"><%- (post.posTitu) %></textarea>  
                             </div>
-                            <div class="col-sm-6"></div>
-                            <div class="col-sm-3">
-                                <p>Autor: <%- (post.Usunome)  %></p>
-                                <button onclick="enviaEdit()" class="bota btn" type="button">Editar</button>
+                            <div class="col-sm-4">
+                                <p style="display: inline;">Autor: <%- (post.Usunome)  %></p>
+                                <button  style="display: inline;" onclick="enviaEdit()" class="bota btn" type="button">Editar</button>
                             </div>
                         </div>
-                        <textarea name="" id="editTexto" ><%- (post.PosCont) %> </textarea>
-                        <p>Data de Postagem: <%- (post.PosData)  %></p>
+                        <textarea name="" id="editTexto" style="min-width: 90%; min-height: 140px; margin-top: 10px;" ><%- (post.PosCont) %> </textarea>
+                        <p style="margin-top: 10px;">Data de Postagem: <%- (post.PosData)  %></p>
                         <% } %>
                 <% } %>
             </div>

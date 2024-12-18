@@ -113,7 +113,7 @@
 					<div id="colunaf" class="col-md-12">
 						<% for (let i = 0; i < postados.length; i++) {%>
 						<a style="color: black;" href="/post?idPost= <%- (postados[postados.length - i - 1].idPost) %>">
-							<div id="<%-postados.length - i - 1%>" class="bordado text-4d"> 
+							<div id="<%-postados.length - i - 1%>" class="bordado text-4d" style="margin: 20px;"> 
 								<h1 id="Titulo<%- (postados.length - i - 1) %>" class="titulo"><%- (postados[postados.length - i - 1].posTitu) %></h1>
 								<p id="Conteudo<%- (postados.length - i - 1) %>" class="conteudo"><%- (postados[postados.length - i - 1].posCont) %></p>
 								<p id="Autor<%- (postados.length - i - 1) %>" class="autor" style="text-align: end; padding-right:5%;"><%- (postados[postados.length - i - 1].usuNome) %></p>
@@ -127,7 +127,7 @@
         <div class="col-md-3">
             <div class="container-fluid cor teste1">
                 <p class="center">
-                    Mais comentados
+                    
                 </p>
                 <div class="fundo verde redondo">
                   
