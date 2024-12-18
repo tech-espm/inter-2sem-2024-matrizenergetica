@@ -5,6 +5,8 @@
 
     p{
         font-size: large;
+        padding: 0px;
+        justify-content: center;
     }
 
 </style>
@@ -46,9 +48,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 offset-md-3">
-            <div class="bordado">
+            <div style="padding: 10px;" class="bordado">
                 <% if ((!usuario) || ((usuario.idUsu) != (post.idUsu))) {%>
-                        <div style="padding: 10px;" class="row">
+                        <div class="row">
                             <div class="col-sm-8">
                                 <h2><%- (post.posTitu) %></h2> 
                             </div>
@@ -61,7 +63,7 @@
                         <p style="margin-top: 10px;">Data de Postagem: <%- (post.PosData)  %></p>
                 <% } else { %>
                     <% if ((usuario.idUsu) == (post.idUsu)){ %>
-                        <div style="padding: 10px;" class="row">
+                        <div class="row">
                             <div class="col-sm-8" style="align-content: start;">
                                 <textarea id="editTitu" maxlength="45" style="height: 30px; font-size: larger; font-weight: bold; margin-top: 10px;"><%- (post.posTitu) %></textarea>  
                             </div>
