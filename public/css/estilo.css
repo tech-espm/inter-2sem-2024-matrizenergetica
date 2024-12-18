@@ -500,6 +500,9 @@ height: 100px;
 .redondo{
 	border-radius: 100%;
 }
+.redondinho{
+	border-radius: 30%;
+}
 .imagem-sobre{
 	max-width: 80%;
 	

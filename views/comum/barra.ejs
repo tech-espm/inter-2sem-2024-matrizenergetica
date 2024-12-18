@@ -8,17 +8,27 @@
 <script>
   <%  if (usuario) { %>
     function Penguin() {
-      let Masked = ["/public/img/lp/Ale.jpeg", "/public/img/lp/Hugo.png",  "/public/img/lp/icone.png", "/public/img/lp/Theo.jpg", "/public/img/lp/logo.svg", "/public/img/lp/icon.svg"];
+      <% if(usuario.idUsu == 1) {%>
+        let i = document.getElementById("🎭🐧");
+        let icone = "/public/img/importante/wrp.png";
+        let refaz = `
+
+      <img  src="${icone}" height="40px" class="redondo" alt=""> <p class="center"><%- (usuario.usuNome) %></p>
+      `;
+      i.innerHTML= refaz
+      return;
+      <% } else { %>
+      let Masked = ["/public/img/importante/250.png", "/public/img/importante/rp.png", "/public/img/importante/bp.png", "/public/img/importante/bwp.png", "/public/img/importante/epf.png", "/public/img/importante/gp.png", "/public/img/importante/gdp.png", "/public/img/importante/kugpf.jpg", "/public/img/importante/orp.png", "/public/img/importante/preto.png", "/public/img/importante/Puffle.jpg", "/public/img/importante/pp.png", "/public/img/importante/gp.png", "/public/img/importante/rcp.png", "/public/img/importante/Silver_Puffle.png"];
       let i = document.getElementById("🎭🐧");
       let icone = Masked[Math.floor(Math.random() * Masked.length)]
       let refaz = `
 
-      <img  src="${icone}" height="30px" class="redondo" alt=""> <p class="center"><%- (usuario.usuNome) %></p>
+      <img  src="${icone}" height="40px" class="redondo" alt=""> <p class="center"><%- (usuario.usuNome) %></p>
       `;
       i.innerHTML= refaz
+      <% } %>
       }
-    <% }  %>
-
+    <% } %>
 </script>
 
 
@@ -62,7 +72,7 @@
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
               </svg> Fazer Login
             </button></a>
-          <% } else { %> <button id="🎭🐧" style="border-radius: 60%;" class="btn btn-outline-sucess bota">
+          <% } else { %> <button id="🎭🐧" style="border-radius: 100%;" class="btn btn-outline-sucess bota">
             
           </button>
             <script>
